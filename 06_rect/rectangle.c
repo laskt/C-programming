@@ -16,15 +16,37 @@ int max (int a, int b) {
 }
 
 //Declare your rectangle structure here!
-
+typedef struct{
+  int x;
+  int y;
+  int width;
+  int height;
+}rectangle;
 
 rectangle canonicalize(rectangle r) {
+  if(r.width<0)
+    r.x=r.x+r.width;
+  if(r.height<0)
+    r.y=r.y+r.height;
+  r.width=abs(r.width);
+  r.height=abs(r.height);
   //WRITE THIS FUNCTION
   return r;
 }
 rectangle intersection(rectangle r1, rectangle r2) {
+  rectangle ans;
+  int right;
+  int top;
+  r1=canonicalize(r1);
+  r2=canonicalize(r2);
+  ans.x=max(r1.x,r2.x);
+  ans.y=max(r1.y,r2.y);
+  right = min(r1.x+r1.width,r2.x+r2.width);
+  top = min(r1.y+r1.height,r2.y+r2.height); 
+  ans.width= abs(right-ans.x);
+  ans.height=abs(top-ans.y);
+  return ans;
   //WRITE THIS FUNCTION
-  return r1;
 }
 
 //You should not need to modify any code below this line
@@ -68,7 +90,7 @@ int main (void) {
 
   r4.x = 0;
   r4.y = 7;
-  r4.width = -4;
+  r4.width =-4;
   r4.height = 2;
   printf("r4 is ");
   printRectangle(r4);
