@@ -42,7 +42,8 @@ in this problem might be.
      
      Note that there is a corner case where the correct answer
      is "no intersection".  We have not learned how to represent
-     "no such thing" yet, but we will consider a rectangle with
+
+"no such thing" yet, but we will consider a rectangle with
      both width and height equal to 0 to mean "no such rectangle".
      
      We will consider a rectangle to have one (but not the other)
