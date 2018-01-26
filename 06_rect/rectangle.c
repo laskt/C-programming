@@ -42,9 +42,13 @@ rectangle intersection(rectangle r1, rectangle r2) {
   ans.x=max(r1.x,r2.x);
   ans.y=max(r1.y,r2.y);
   right = min(r1.x+r1.width,r2.x+r2.width);
-  top = min(r1.y+r1.height,r2.y+r2.height); 
+  top = min(r1.y+r1.height,r2.y+r2.height);
   ans.width= abs(right-ans.x);
   ans.height=abs(top-ans.y);
+  if (abs(r1.x-r2.x)>max(r1.width,r2.width)||(abs(r1.y-r2.y)>max(r1.height,r2.height))){
+    ans.width=0;
+    ans.height=0;
+  }
   return ans;
   //WRITE THIS FUNCTION
 }
