@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct _retire_info{
+struct _retire_info{
   int months;   //no of months applicable to
   double contribution;   //number of dollars spent or contributed to the account per month
   double rate_of_return;  //rate of return (assumed after inflation)
-}retire_info;
+};
+
+typedef struct _retire_info retire_info;
 
 double calculate_balance(retire_info r, double initial){
   double balance;
