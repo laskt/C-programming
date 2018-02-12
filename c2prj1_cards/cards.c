@@ -91,10 +91,10 @@ card_t card_from_num(unsigned c) {
   int val = c/13;
   int rem = c%13;
   switch(val){
-  case 0 : temp.suit=SPADES;
-  case 1 : temp.suit=HEARTS;
-  case 2 : temp.suit=DIAMONDS;
-  case 3 : temp.suit=CLUBS;
+  case 0 : temp.suit=SPADES; break;
+  case 1 : temp.suit=HEARTS; break;
+  case 2 : temp.suit=DIAMONDS; break;    
+  case 3 : temp.suit=CLUBS; break;
   }
   switch(rem){
   case 0 : temp.value=2; break;
