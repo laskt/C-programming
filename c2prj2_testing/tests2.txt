@@ -1,0 +1,9 @@
+As Ks 0s Js 7d 7c Qs; 7h 7s 0s Js 7d Qs 7c  //royal flush vs 4 of a kind
+3s Ac 3d 4c 3h 5h Ah; Qh Kh 3d 4c 3h 5h Ah  //full house vs flush
+9d 8h 4c 5c 7c 6h 4s; Ad Ah 4c 5c 7c 6h 4s  //straight vs 2 pair (Two possible straights, which one to choose?)
+9d 7h 4c 6s 5c 5h 8h; 4d Ah 4c 6s 5c 5h 8h  //straight vs 2 pair (Simple case)
+9d 8h 9c Js 7c 6h 5c; Ad Ah 9c Js 7c 6h 5c  //straight vs pair (Two cards of same value make the same straight. What to choose?)
+As Ks 2c Ac 7c Qh 5s; 5c 5h 2c Ac 7c Qh 5s  //pair vs 3 of a kind
+Kc Ac 3c 4d 5c Kh 2c; Jc 9c 3c 4d 5c Kh 2c  //Flush vs Smaller Flush (suits count with clubs , last value in enum)
+      	       	      	       	     	    //Flush+Straight is not Straight Flush. Checks Low Straight Case. 	       	       
+As Qs Ks Kd Js 0d 0s; Jh Jd Ks Kd Js 0d 0s  //Two cards to choose from in straight flush and straight scenario
